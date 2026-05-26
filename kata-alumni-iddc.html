@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kata Alumni - IDDC Digital Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#bfc9c3",
+                    "surface-bright": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#221b0a",
+                    "on-surface-variant": "#404944",
+                    "on-surface": "#191c1e",
+                    "primary-fixed-dim": "#95d3ba",
+                    "on-secondary-fixed": "#241a00",
+                    "tertiary-container": "#4c432f",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#f0e1c5",
+                    "surface-container-high": "#e6e8ea",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f2f4f6",
+                    "primary": "#003527",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "secondary": "#735c00",
+                    "on-primary-container": "#80bea6",
+                    "surface-container": "#eceef0",
+                    "secondary-fixed": "#ffe088",
+                    "tertiary-fixed-dim": "#d3c5aa",
+                    "primary-container": "#064e3b",
+                    "tertiary": "#352d1a",
+                    "surface-tint": "#2b6954",
+                    "on-secondary-container": "#745c00",
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-container": "#fed65b",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#4f4631",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "outline": "#707974",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-primary-fixed": "#002117",
+                    "inverse-primary": "#95d3ba",
+                    "on-tertiary-container": "#bdb096",
+                    "surface-variant": "#e0e3e5",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#b0f0d6",
+                    "background": "#f7f9fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 53, 39, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full shadow-sm bg-white/95">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-950" data-icon="menu">menu</span>
+<img alt="IDDC Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uj9YwP38POAxOcF2PVWbdsarK2GtJhYtBhesw-0QUKtrVV0ZgtBOLis7CPv81J5TarQnS7uWj3M9jvMXrjaqEMeUpxbiGJNVMcH14KFxctdj-vvKKWaryH26E6YsF0epk0IXvRMmAd-OA6w902SMUBTv54bs_R3l-7654u8-QRBydf4kw0GVfLltP51V_AE3MQROn8hsYCP8c2A4tFnggliadYD4IDUpnrKU7d7zJBnaMPGe75vulxzFyNX16Snzl2eTNFoZIQcWg"/>
+</div>
+<button class="bg-secondary text-on-secondary px-4 py-2 rounded-xl font-label text-sm font-semibold hover:scale-95 duration-200 transition-all">
+            Daftar Sekarang
+        </button>
+</nav>
+<main class="min-h-screen">
+<!-- Hero Section: Editorial Style -->
+<section class="relative pt-20 pb-32 px-6 overflow-hidden bg-surface hero-pattern">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-3/5">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold mb-6 tracking-wider uppercase">Jejak Langkah Alumni</span>
+<h1 class="text-5xl md:text-7xl font-headline text-primary leading-[1.1] mb-8">Mentransformasi <span class="italic text-secondary">Dakwah</span> Melalui Desain Visual.</h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed font-body">
+                        Kisah para profesional yang menemukan harmonisasi antara estetika modern dan nilai-nilai spiritual di IDDC Digital Sanctuary.
+                    </p>
+</div>
+<div class="w-full md:w-2/5 relative">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/10">
+<img class="w-full h-full object-cover" data-alt="professional modern office environment with warm sunlight and architectural clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRsDVkUCXCGobjwOb4Tsa-5ODSpErLI2i--nzrMenkPSMvHp3Q-9EV2HLqxlyDWVNDkHULgcDC4ZIGXJ4KlGRWOkaLM1BEmjMNM2zyBTOlcZp9NTSX_TXrt3iac_ValpVgdGD8tOiigw5UcMhwECp3ltl949brNM2Scz1ggJX01DMK09xM5Uz7Alu64yq90ORkdZybW9BYK5mdYdlnLaDsHKWFyTfR204AWvYXX6clnvdZXjAXWas6zHGy3JvRWfgjzALKvE2rNu8n"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-primary-container p-8 rounded-2xl text-on-primary shadow-xl max-w-[240px]">
+<p class="font-headline text-3xl mb-1">500+</p>
+<p class="font-label text-xs text-primary-fixed opacity-80 uppercase tracking-widest">Alumni Berkarya</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Testimonial: Spiritual Insight Style -->
+<section class="py-24 bg-surface-container-low px-6">
+<div class="max-w-5xl mx-auto">
+<div class="bg-surface-container-lowest rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-center flex flex-col items-center">
+<!-- Geometric Accent -->
+<div class="absolute top-0 right-0 w-64 h-64 opacity-[0.03] text-primary">
+<span class="material-symbols-outlined text-[16rem]">auto_awesome</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-5xl mb-8" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<h2 class="text-2xl md:text-4xl font-headline leading-relaxed text-primary mb-10 italic">
+                        "IDDC tidak hanya mengajarkan saya cara menggunakan tool desain, tapi bagaimana meletakkan niat ibadah dalam setiap piksel yang saya buat. Sekarang saya merasa desain saya memiliki jiwa."
+                    </h2>
+<div class="flex flex-col items-center gap-4">
+<div class="w-20 h-20 rounded-full border-4 border-secondary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a confident middle-eastern man wearing professional creative attire in a bright studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwitcoRsHkFPvz1VkXHTh9yK-8EsswhumCEoM3vUEaOjjdM1nMa-g7l0Abjo0M_Bj6FKSmKKpB9pQ1h_P_eVY2_krcE8_TB-xizKlpclLHTLOZnlSQ52c_S3GGOOdQhvYiwz4Gi-iskKXPd2_vqjFxftOgpnXjYg8zE6yl7pw-ZK46pUFlnfeL7EgHpzSiIv_fS_IugDHLDSpDCGK8nJBmC4hkRQADMqOj9sfxB1xDM0ZGhmzUv4ILHJ962HNimAeLxgg6m1WWs_n3"/>
+</div>
+<div>
+<p class="font-bold text-xl text-primary font-headline">Ahmad Fauzan</p>
+<p class="text-sm text-secondary font-label font-bold uppercase tracking-widest">Creative Director, Al-Hikmah Agency</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Testimonials -->
+<section class="py-32 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-center">
+<h3 class="text-3xl font-headline text-primary mb-4">Karya Mereka di Dunia Nyata</h3>
+<div class="w-20 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Card 1 -->
+<div class="md:col-span-8 bg-surface-container rounded-3xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center group transition-all hover:bg-white hover:shadow-xl hover:shadow-primary/5">
+<div class="w-full md:w-1/3 aspect-square rounded-2xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="professional muslim woman designer working in a minimalist creative workspace with high end technology" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgwEa9ZpHSQ7XbUHRHQmdHXpp9_d6YUX-Mir6vV2Qq3_wThyCO6fwZnGCK4D1ruJjIui9wmXmJxtRVAK_dOryOh5HDorZM57sML8huL61NM_DipF2enK9ziJmuKrZ6da1U3ZUOCNuoKo6t5zgJ0Y_qDotimiuejCbt37PxvBKafvOJWhEpr_7LtrdKpYxxQntguTHkUwbQ3HBaXzoahJUxdc2dD-ODsUBMs7VbzEpaeC8DB-UVaMD-e_JadK3FTD-vKm4MRArLjyJR"/>
+</div>
+<div class="w-full md:w-2/3">
+<span class="text-xs font-bold text-secondary font-label tracking-widest uppercase mb-4 block">Product Designer @ TechHalal</span>
+<p class="text-lg font-body text-on-surface-variant italic mb-6 leading-relaxed">"Kurikulum IDDC sangat relevan dengan industri global. Saya bisa bersaing di level internasional tanpa meninggalkan identitas saya sebagai muslim."</p>
+<h4 class="text-xl font-bold text-primary font-headline">Sarah Jamilah</h4>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="md:col-span-4 bg-primary-container rounded-3xl p-8 text-on-primary flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">workspace_premium</span>
+<p class="text-lg font-headline italic mb-8 leading-relaxed">"Belajar visual storytelling di IDDC mengubah cara pandang saya tentang dakwah digital."</p>
+</div>
+<div class="relative z-10">
+<p class="font-bold font-headline text-lg">Yusuf Mansur Jr.</p>
+<p class="text-xs opacity-70 font-label tracking-wider uppercase">Independent Motion Designer</p>
+</div>
+<!-- Background Pattern -->
+<div class="absolute -bottom-10 -right-10 opacity-10">
+<span class="material-symbols-outlined text-[12rem]">design_services</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="md:col-span-5 bg-surface-container-high rounded-3xl p-10 flex flex-col">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-16 h-16 rounded-2xl overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="professional designer with glasses smiling confidently in a modern studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbbXIcHDgAUmIbOY-N-eNvXhRgxvm7tU94mwdvIIR0IZ599DVe9y85wm5aK2b043QZOKegw33scBCWBs6w0fe01VVCXloBjWMaXKYmwU8xkvM0iySGT_D71RcF4URoNhOBhkoUCLFCIQryA6T-2MDwAT9ROKZqR5IA_DUfxHPIFM17YiKk40lk_mFoLDPN2rrLLAA7mEBBF0_shiUHXeDcxhoTXTKd1g-Fkqei2duy74wvZRAg_IOTqNRfi22GkseEq6-suJ4oSCOC"/>
+</div>
+<div>
+<p class="font-bold text-primary font-headline">Rania Azzahra</p>
+<p class="text-xs text-secondary font-label font-bold uppercase">UI/UX Consultant</p>
+</div>
+</div>
+<p class="text-on-surface-variant font-body leading-relaxed">
+                            "Network yang dibangun di IDDC sangat kuat. Setelah lulus, saya langsung mendapatkan project dari sesama alumni untuk merancang aplikasi edukasi Islam."
+                        </p>
+</div>
+<!-- Card 4 -->
+<div class="md:col-span-7 bg-white rounded-3xl p-10 shadow-sm border border-outline-variant/10 flex flex-col md:flex-row gap-10">
+<div class="w-full md:w-1/2">
+<p class="text-primary font-headline text-xl italic mb-6 leading-snug">"Desain adalah bahasa universal. Di IDDC, saya belajar menerjemahkan nilai-nilai Al-Qur'an ke dalam bahasa visual yang modern."</p>
+<p class="font-bold text-primary font-headline">Ibrahim Khalil</p>
+<p class="text-xs text-secondary font-label font-bold uppercase tracking-wider">Senior Brand Identity</p>
+</div>
+<div class="w-full md:w-1/2 aspect-video rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="clean bright office space with elegant wooden desks and plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzUhbCQ6OA8Re6p9mid9Gq1gM_LxIE3hPPxPxDIdyR5TehZuYLo4E0aVW9A5-oHGYr5dNIOd918C1xceGuNi2simJaFLF0ZUF7r4te0r9x6vVXdk80X-x7_Rca3OF2YWDkEa9Ja0lG6wh5ZKgREomzXbxEmqMK0GVZkJ3BysNp1rEOmJnVAcTk5rNU9ybzicIEy5AW715czkGOgh-gHnl0PGzFIPDs_ePyhANJCw6ThdwUzrfAJNTbo14hMONG56OXJDxHlfzGuyHC"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-6">
+<div class="max-w-4xl mx-auto bg-primary rounded-[2.5rem] p-12 md:p-20 text-center text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-3xl md:text-5xl font-headline mb-6">Siap Menjadi Bagian dari Generasi Berikutnya?</h2>
+<p class="text-primary-fixed opacity-80 mb-10 max-w-xl mx-auto text-lg">Bergabunglah dengan komunitas desainer muslim yang berdedikasi pada keunggulan estetika dan nilai spiritual.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-xl font-label font-bold text-sm hover:brightness-110 transition-all scale-100 active:scale-95 duration-200">Daftar Sekarang</button>
+<button class="border border-primary-fixed-dim text-primary-fixed-dim px-10 py-4 rounded-xl font-label font-bold text-sm hover:bg-white/10 transition-all">Konsultasi Kurikulum</button>
+</div>
+</div>
+<!-- Artistic Overlay -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary-container opacity-50"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-emerald-900 dark:bg-black w-full px-8 py-12 flex flex-col items-center gap-6">
+<div class="text-xl font-noto-serif text-yellow-500 font-headline">IDDC Digital Sanctuary</div>
+<div class="flex flex-wrap justify-center gap-8 font-inter text-sm text-emerald-100/80">
+<a class="hover:text-yellow-400 transition-colors" href="profil-akademik-iddc.html">Tentang Kami</a>
+<a class="hover:text-yellow-400 transition-colors" href="#">Kebijakan Privasi</a>
+<a class="hover:text-yellow-400 transition-colors" href="#">Kontak</a>
+</div>
+<div class="flex gap-4 mt-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-emerald-100 hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-emerald-100 hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+<p class="font-inter text-sm text-emerald-100/60 mt-4 text-center">© 2024 IDDC Digital Sanctuary. All Rights Reserved.</p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-md flex justify-around items-center px-4 py-3 pb-safe shadow-[0_-4px_24px_0_rgba(0,0,0,0.04)] rounded-t-3xl">
+<a href="index.html" class="flex flex-col items-center justify-center text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900 rounded-xl px-2 cursor-pointer hover:opacity-80 transition-opacity"  href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-plus-jakarta-sans text-xs font-medium">Beranda</span>
+</a>
+<a href="profil-akademik-iddc.html" class="flex flex-col items-center justify-center text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900 rounded-xl px-2 cursor-pointer hover:opacity-80 transition-opacity"  href="profil-akademik-iddc.html">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-plus-jakarta-sans text-xs font-medium">Profil</span>
+</a>
+<a class="flex flex-col items-center justify-center text-yellow-700 dark:text-yellow-500 font-bold px-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-plus-jakarta-sans text-xs font-medium">Alumni</span>
+</a>
+<a href="pmb-dukungan-iddc.html" class="flex flex-col items-center justify-center text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900 rounded-xl px-2 cursor-pointer hover:opacity-80 transition-opacity"  href="pmb-dukungan-iddc.html">
+<span class="material-symbols-outlined">school</span>
+<span class="font-plus-jakarta-sans text-xs font-medium">PMB</span>
+</a>
+<a href="pmb-dukungan-iddc.html" class="flex flex-col items-center justify-center text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900 rounded-xl px-2 cursor-pointer hover:opacity-80 transition-opacity"  href="pmb-dukungan-iddc.html">
+<span class="material-symbols-outlined">volunteer_activism</span>
+<span class="font-plus-jakarta-sans text-xs font-medium">Dukungan</span>
+</a>
+</nav>
+<!-- Custom Nav Drawer -->
+<div id="nav-drawer" class="fixed inset-0 z-[100] hidden">
+    <!-- Backdrop -->
+    <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0"></div>
+    <!-- Drawer Content -->
+    <div id="drawer-content" class="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-emerald-950 text-white shadow-2xl transition-transform duration-300 -translate-x-full flex flex-col p-6 overflow-y-auto">
+        <div class="flex justify-between items-center mb-8 border-b border-emerald-800/40 pb-4">
+            <span class="font-headline text-2xl font-bold text-amber-400" style="font-family: 'Noto Serif', serif;">IDDC Menu</span>
+            <button id="close-drawer-btn" class="p-2 hover:bg-emerald-900 rounded-full text-emerald-100">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex-1 space-y-2">
+            <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-900 text-emerald-100 transition-colors">
+                <span class="material-symbols-outlined">home</span>
+                <span class="font-label font-semibold">Beranda</span>
+            </a>
+            <a href="profil-akademik-iddc.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-900 text-emerald-100 transition-colors">
+                <span class="material-symbols-outlined">account_balance</span>
+                <span class="font-label font-semibold">Profil & Akademik</span>
+            </a>
+            <a href="aktivitas-kuliah-iddc.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-900 text-emerald-100 transition-colors">
+                <span class="material-symbols-outlined">school</span>
+                <span class="font-label font-semibold">Aktivitas Kuliah</span>
+            </a>
+            <a href="kegiatan-ekstra-iddc.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-900 text-emerald-100 transition-colors">
+                <span class="material-symbols-outlined">sports_martial_arts</span>
+                <span class="font-label font-semibold">Kegiatan Ekstra</span>
+            </a>
+            <a href="karya-testimoni-iddc.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-900 text-emerald-100 transition-colors">
+                <span class="material-symbols-outlined">palette</span>
+                <span class="font-label font-semibold">Karya & Testimoni</span>
+            </a>
+            <a href="pmb-dukungan-iddc.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-900 text-emerald-100 transition-colors">
+                <span class="material-symbols-outlined">volunteer_activism</span>
+                <span class="font-label font-semibold">PMB & Dukungan</span>
+            </a>
+            <a href="kolaborasi-iddc.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-900 text-emerald-100 transition-colors">
+                <span class="material-symbols-outlined">handshake</span>
+                <span class="font-label font-semibold">Kolaborasi</span>
+            </a>
+            <a href="kata-alumni-iddc.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-900 text-emerald-100 transition-colors">
+                <span class="material-symbols-outlined">chat</span>
+                <span class="font-label font-semibold">Kata Alumni</span>
+            </a>
+        </nav>
+        <div class="border-t border-emerald-800/40 pt-4 mt-8">
+            <a href="pmb-dukungan-iddc.html" class="block w-full bg-amber-500 text-center text-emerald-950 py-3 rounded-xl font-label font-bold text-sm hover:scale-95 duration-200">
+                Daftar Sekarang
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleDrawer() {
+    const drawer = document.getElementById('nav-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const content = document.getElementById('drawer-content');
+    
+    if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        setTimeout(() => {
+            backdrop.classList.remove('opacity-0');
+            backdrop.classList.add('opacity-100');
+            content.classList.remove('-translate-x-full');
+            content.classList.add('translate-x-0');
+        }, 10);
+    } else {
+        backdrop.classList.remove('opacity-100');
+        backdrop.classList.add('opacity-0');
+        content.classList.remove('translate-x-0');
+        content.classList.add('-translate-x-full');
+        setTimeout(() => {
+            drawer.classList.add('hidden');
+        }, 300);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const backdrop = document.getElementById('drawer-backdrop');
+    const closeBtn = document.getElementById('close-drawer-btn');
+    if (backdrop) backdrop.addEventListener('click', toggleDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', toggleDrawer);
+
+    // Bind click handlers to menu icons
+    document.querySelectorAll('.material-symbols-outlined').forEach(el => {
+        if (el.textContent.trim() === 'menu') {
+            el.style.cursor = 'pointer';
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleDrawer();
+            });
+        }
+    });
+});
+</script></body></html>
